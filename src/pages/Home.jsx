@@ -44,6 +44,7 @@ function Home() {
 
     const [current, setCurrent] = useState(0);
     const [newBurger, setNewBurger] = useState(0);
+    const [play, setPlay] = useState(true);
 
     const nextSlide = () => {
         setNewBurger((prev) => 
@@ -57,15 +58,27 @@ function Home() {
         );
     };
 
+    const prevMain = () => {
+        setCurrent((prev) => 
+            prev === 0 ? images.length -1 : prev - 1
+        );
+    };
+
+    const nextMain = () => {
+        setCurrent((prev) => 
+            prev === images.length -1 ? 0 : prev + 1
+        )
+    }
+
     useEffect(() => {
+        if(!play) return;
+        
         const timer = setInterval(() => {
-            setCurrent((prev) =>
-                prev === images.length -1 ? 0 : prev + 1
-            );
+            nextMain();
         }, 3000);
 
         return () => clearInterval(timer);
-    }, []);
+    }, [play]);
 
   return ( 
     <>
@@ -73,9 +86,9 @@ function Home() {
             <div className='slider'>
                 <img src={images[current]} alt="" />
                 <div className='slide-btn'>
-                    <button>이전</button>
-                    <button>정지</button>
-                    <button>이후</button>
+                    <button onClick={prevMain}>이전</button>
+                    <button onClick={() => setPlay((prev) => !prev)}>{play ? "정지" : "재생"}</button>
+                    <button onClick={nextMain}>이후</button>
                 </div>
             </div>
         </div>
@@ -84,18 +97,18 @@ function Home() {
         </div>
         <div className='newImages'>
             <div className='newImagesDetail'>
-                <button onClick={preSlide}>이전</button>
+                <button onClick={preSlide}>전</button>
                 <div className='newImageOne'>
                     <img src={newImages[newBurger]} alt="newBurger" />
                     <p>{newImageInfo[newBurger].name}</p>
                     <p>{newImageInfo[newBurger].engName}</p>
                 </div>
                 <div className='newImageOne'>
-                    <img src={newImages[newBurger + 1]} alt="newBurger" />
-                    <p>{newImageInfo[newBurger + 1].name}</p>
-                    <p>{newImageInfo[newBurger + 1].engName}</p>
+                    <img src={newImages[(newBurger + 1) % newImages.length]} alt="newBurger" />
+                    <p>{newImageInfo[(newBurger + 1) % newImages.length ].name}</p>
+                    <p>{newImageInfo[(newBurger + 1) % newImages.length].engName}</p>
                 </div>
-                <button onClick={nextSlide}>이후</button>
+                <button onClick={nextSlide}>후</button>
             </div>
             <div>
                 <p className='hiMent'>햄부기의 최신 소식을 빠르게 받아보세요!</p>
