@@ -1,16 +1,29 @@
-# React + Vite
+# McDonald's Clone Coding
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React를 활용하여 맥도날드 코리아 웹사이트의 주요 UI와 기능을 구현하는 클론 프로젝트입니다.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 메인 배너 슬라이드
+- 메뉴 섹션 UI
+- Footer 구현
+- React State 기반 슬라이드 제어
+- 반응형 레이아웃 구현 예정
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Technology | Description |
+|------------|-------------|
+| React | UI 개발 |
+| Vite | 개발 환경 |
+| JavaScript | 로직 구현 |
+| CSS | 스타일링 |
 
-## Expanding the ESLint configuration
+## Reference Site
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://www.mcdonalds.co.kr
+
+## Disclaimer
+
+This project was created for educational and portfolio purposes only.
+McDonald's trademarks, logos, and branding belong to McDonald's Corporation.a
