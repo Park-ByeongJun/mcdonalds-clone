@@ -26,4 +26,4 @@ https://www.mcdonalds.co.kr
 ## Disclaimer
 
 This project was created for educational and portfolio purposes only.
-McDonald's trademarks, logos, and branding belong to McDonald's Corporation.
+McDonald's trademarks, logos, and branding belong to McDonald's Corporation.a
