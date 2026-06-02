@@ -93,7 +93,7 @@ function Home() {
             </div>
         </div>
         <div>
-            <h1 style={{ margin : '20px' }}>신메뉴</h1>
+            <h1 style={{ margin : '50px' }}>NEW MENU</h1>
         </div>
         <div className='newImages'>
             <div className='newImagesDetail'>
