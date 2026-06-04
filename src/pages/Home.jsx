@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
-import ham1 from '../image/ham1.png'
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
+import { FaStop } from "react-icons/fa6";
+import { FaPlay } from "react-icons/fa";
+import ham1 from '../image/newBurger1.png'
 import ham2 from '../image/ham2.png'
 import ham3 from '../image/ham3.png'
 import ham4 from '../image/ham4.png'
@@ -86,9 +90,9 @@ function Home() {
             <div className='slider'>
                 <img src={images[current]} alt="" />
                 <div className='slide-btn'>
-                    <button onClick={prevMain}>이전</button>
-                    <button onClick={() => setPlay((prev) => !prev)}>{play ? "정지" : "재생"}</button>
-                    <button onClick={nextMain}>이후</button>
+                    <button onClick={prevMain}><GrPrevious /></button>
+                    <button onClick={() => setPlay((prev) => !prev)}>{play ? <FaStop /> : <FaPlay /> }</button>
+                    <button onClick={nextMain}><GrNext /></button>
                 </div>
             </div>
         </div>
@@ -97,7 +101,7 @@ function Home() {
         </div>
         <div className='newImages'>
             <div className='newImagesDetail'>
-                <button onClick={preSlide}>전</button>
+                <button onClick={preSlide}><GrPrevious /></button>
                 <div className='newImageOne'>
                     <img src={newImages[newBurger]} alt="newBurger" />
                     <p>{newImageInfo[newBurger].name}</p>
@@ -108,7 +112,7 @@ function Home() {
                     <p>{newImageInfo[(newBurger + 1) % newImages.length ].name}</p>
                     <p>{newImageInfo[(newBurger + 1) % newImages.length].engName}</p>
                 </div>
-                <button onClick={nextSlide}>후</button>
+                <button onClick={nextSlide}><GrNext /></button>
             </div>
             <div>
                 <p className='hiMent'>햄부기의 최신 소식을 빠르게 받아보세요!</p>

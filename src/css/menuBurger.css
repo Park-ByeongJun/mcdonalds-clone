@@ -1,0 +1,15 @@
+.burgerMenu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0;
+}
+
+.burgerDetail img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 20px;
+}
