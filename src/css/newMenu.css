@@ -1,0 +1,10 @@
+.newMenus {
+    list-style: none;
+}
+.newMenu img{
+    width: 450px;
+    height: 450px;
+    /* object-fit: cover; */
+    border-radius: 25px;
+    margin: 20px;
+}

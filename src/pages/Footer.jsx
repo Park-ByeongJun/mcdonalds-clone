@@ -16,7 +16,7 @@ function Footer() {
                     <ul className="footerList">
                         <li>개인정보 처리방침</li>
                         <li>가맹점 문의</li>    
-                        <li>고객 문의</li>
+                        <li><Link to='/qna/OneToOne'>고객 문의</Link></li>
                         <li>인재채용</li>
                     </ul>
                 </div>
