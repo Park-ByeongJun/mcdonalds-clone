@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "베스트 메뉴 할인 이벤트",
+    "date": "2026-06-01",
+    "image": "/images/events/event1.png",
+    "content" : "베스트 메뉴 최대 30% 할인 이벤트를 진행합니다 인기 메뉴를 더 맛있게 즐길 기회!"
+  },
+  {
+    "id": 2,
+    "title": "딸기 신메뉴 이벤트",
+    "date": "2026-06-03",
+    "image": "/images/events/event2.png",
+    "content" : "딸기 스무디 출시 기념 이벤트로 신메뉴 구매 시 딸기 디저트 1 + 1 "
+  },
+  {
+    "id": 3,
+    "title": "주말엔 패밀리 세트!",
+    "date": "2026-06-01",
+    "image": "/images/events/event3.png",
+    "content" : "주말엔 패밀리 세트 ! 온 가족이 함께 즐기는 특별한 주말 "
+  }
+]
