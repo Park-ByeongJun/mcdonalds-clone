@@ -34,7 +34,7 @@ function Header() {
                             EVENT
                             <ul className="dropdown">
                                 <li><Link to="/event/event">이벤트</Link></li>
-                                <li><Link to="/event/coupon">쿠폰등록</Link></li>
+                                <li><Link to="/event/coupon">쿠폰</Link></li>
                             </ul>
                         </li>   
                         <li>    
