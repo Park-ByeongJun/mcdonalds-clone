@@ -1,7 +1,4 @@
-.newMenus {
-    list-style: none;
-}
-.newMenu img{
+img {
     width: 450px;
     height: 450px;
     /* object-fit: cover; */

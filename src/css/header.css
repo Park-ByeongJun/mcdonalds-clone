@@ -43,10 +43,11 @@
     padding: 0;
     margin: 0;
     min-width: 120px;
+    border-radius: 25px;
 }
 
 .dropdown li {
-    margin: 5px;
+    margin: 8px;
 }
 .dropdown li:hover {
     font-weight: bold;
@@ -58,4 +59,7 @@
 }
 .newMenu > li:hover .dropdown {
     display: block;
+}
+.menuLink {
+    text-decoration: none;
 }

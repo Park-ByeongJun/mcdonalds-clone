@@ -1,0 +1,29 @@
+ .form-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+ }
+ button {
+    border-radius: 999px;
+    width: 90px;
+    height: 35px;
+    margin-bottom: 50px;
+    border: 1px solid white;
+    background-color: rgb(224, 233, 159);
+ }
+ input {
+    height: 19px;
+    border-radius: 999px;
+    border: solid 1px rgb(198, 182, 182);
+ }
+ select {
+    height: 20px;
+    border-radius: 999px;
+    border: solid 1px rgb(198, 182, 182);
+ }
+ textarea {
+    border-radius: 25px;
+    border: solid 1px rgb(198, 182, 182);
+    padding: 10px;
+ }
