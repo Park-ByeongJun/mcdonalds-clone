@@ -33,14 +33,10 @@ function NewMenu() {
                     <div> 
                         <h1>신메뉴</h1>
                     </div>  
-                    <div style={{display: "flex", justifyContent: "center"}}>
-                        <ul className='newMenus'>
+                    <div style={{display: "flex", justifyContent: "center" ,flexDirection: "column", alignItems: "center"}}>
                             {newMenus.map((newMenu) => (
-                                <li className='newMenu' key={newMenu.name}>
-                                    <img src={newMenu.img} alt="" />
-                                </li>
+                                    <img key={newMenu.name} src={newMenu.img} alt="" />
                             ))}
-                        </ul>
                     </div>
                 </div>
             </div>

@@ -54,6 +54,15 @@ body {
   margin: 0;
 }
 
+ button {
+    border-radius: 999px;
+    width: 90px;
+    height: 35px;
+    margin-bottom: 50px;
+    border: 1px solid white;
+    background-color: rgb(224, 233, 159);
+ }
+
 #root {
   width: 1126px;
   max-width: 100%;

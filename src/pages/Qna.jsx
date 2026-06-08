@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/newNotice.css';
+import { Link } from 'react-router-dom';
 
 function Qna() {
 
@@ -30,7 +31,7 @@ function Qna() {
                 <h1>Q & A</h1>
             </div>
             <div style={{display: "flex", justifyContent: "flex-end", marginRight: "50px"}}>
-                <button>질문하기</button>
+                <Link to="/qna/qna/question"><button>질문하기</button></Link>
             </div>
             <div className='notice-wrap'>
                 <table className='notice-table'>

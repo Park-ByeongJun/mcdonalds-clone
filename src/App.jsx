@@ -17,6 +17,7 @@ import EventEvent from './pages/Event'
 import EventCoupon from './pages/EventCoupon'
 import OneToOne from './pages/OneToOne';
 import Qna from './pages/Qna';
+import QnaQuestion from './pages/QnaQuestion';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
             
             <Route path='/qna/oneToOne' element={<OneToOne />} />
             <Route path='/qna/qna' element={<Qna />} />  
+            <Route path='/qna/qna/question' element={<QnaQuestion />} />
           </Routes>
         <Footer />
       </BrowserRouter>
