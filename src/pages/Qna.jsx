@@ -1,29 +1,30 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/newNotice.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Qna() {
 
-    const [oneQs, setOneQs] = useState([]);
-    const sortOneQs = [...oneQs].sort((a, b) => b.id - a.id);
-
+    const [qnaList, setQnaList] = useState([]);
+    const sortQnaList = [...qnaList].sort((a,b) => b.id - a.id);
     const [page, setPage] = useState(1);
     const pageSize = 10;
     const startIndex = (page -1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const totalPage = Math.ceil(oneQs.length / pageSize );
-    const currentOneQ = sortOneQs.slice(startIndex, endIndex);
+    const totalPage = Math.ceil(qnaList.length / pageSize );
+    const currentOneQ = sortQnaList.slice(startIndex, endIndex);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("/data/oneQ.json")
-        .then((res) => {
-            setOneQs(res.data);
-        })
-        .catch((err) => {
-            console.log("OneToOneQuestion Error : ", err);
-        });
+        axios.get("http://localhost:3001/qna")
+            .then((res) => {
+                setQnaList(res.data);
+            })
     }, []);
+
+    function qnaDetail(id) {
+        navigate(`/qna/qna/${id}`);
+    }
 
     return(
         <>
@@ -50,9 +51,9 @@ function Qna() {
                         </tr>
                     </thead>
                     <tbody>
-                        {oneQs.map((q, index) => (
-                            <tr key={q.id}>
-                                <td>{q.id}</td>
+                        {sortQnaList.map((q, index) => (
+                            <tr onClick={() => qnaDetail(q.id)} key={q.id}>
+                                <td>{sortQnaList.length - index}</td>
                                 <td>{q.title}</td>
                                 <td>{q.date}</td>
                                 <td>{q.answer.length === 0 ? "X" : "O"}</td>

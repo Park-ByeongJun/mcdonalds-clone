@@ -18,6 +18,8 @@ import EventCoupon from './pages/EventCoupon'
 import OneToOne from './pages/OneToOne';
 import Qna from './pages/Qna';
 import QnaQuestion from './pages/QnaQuestion';
+import EventEventDetail from './pages/EventEventDetail';
+import QnaDetail from './pages/QnaDetail';
 
 function App() {
 
@@ -48,11 +50,13 @@ function App() {
             <Route path='/menu/drink' element={<MenuDrink />} />
 
             <Route path='/event/event' element={<EventEvent />} />
+            <Route path='/event/event/:id' element={<EventEventDetail />} />
             <Route path='/event/coupon' element={<EventCoupon />} />
             
             <Route path='/qna/oneToOne' element={<OneToOne />} />
             <Route path='/qna/qna' element={<Qna />} />  
             <Route path='/qna/qna/question' element={<QnaQuestion />} />
+            <Route path='/qna/qna/:id' element={<QnaDetail />} />
           </Routes>
         <Footer />
       </BrowserRouter>

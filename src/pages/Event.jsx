@@ -3,6 +3,7 @@ import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import axios from "axios";
 import '../css/newNotice.css'
+import { Link, useNavigate } from "react-router-dom";
 
 function Event() {
 
@@ -15,6 +16,11 @@ function Event() {
     const endIndex = startIndex + pageSize;
     const totalPage = Math.ceil(notices.length / pageSize);
     const currentNotices = sortNotices.slice(startIndex, endIndex);
+    const navigate = useNavigate();
+
+    function eventDetail(id) {
+        navigate(`/event/event/${id}`);
+    }
 
     useEffect(() => {
         axios.get("/data/events.json")
@@ -47,7 +53,7 @@ function Event() {
                     </thead>
                     <tbody>
                         {currentNotices.map((notice) => (
-                            <tr key={notice.id} className="noticeDetail">
+                            <tr onClick={() => eventDetail(notice.id)} key={notice.id} className="noticeDetail">
                                 <td>{notice.id}</td>
                                 <td><img style={{width: "100px", height: "100px"}} src={notice.image} alt="" /></td>
                                 <td>{notice.title}</td>

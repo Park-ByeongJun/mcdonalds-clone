@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import '../css/oneToOne.css';
 
 function QnaQuestion() {
@@ -9,6 +10,24 @@ function QnaQuestion() {
     const [emailCusDomain, setEmailCusDomain] = useState("");
     const [email, setEmail] = useState("");
     const [content, setContent] = useState("");
+    const answer = "";
+
+    const submitQ = () => {
+        const finalDomain = 
+        emailDomain === "custom" ? emailCusDomain : emailDomain;
+
+    const email = `${emailId}@${finalDomain}`;
+    axios.post("http://localhost:3001/qna", {
+        title, email, content, answer ,date: new Date().toISOString().slice(0,10)
+            }
+        ).then((res) => {
+            alert("문의가 전송되었습니다.");
+            window.location.reload();
+        })
+        .catch((err) => {
+            alert("문제가 발생했습니다. 관리자에게 문의 부탁드립니다.");
+        });
+    };
 
     return (
         <>
@@ -62,7 +81,7 @@ function QnaQuestion() {
                             </ul>
                         </span>
                         <div>
-                            <button>제출</button>
+                            <button onClick={submitQ}>제출</button>
                         </div>
                     </div>
                 </div>
