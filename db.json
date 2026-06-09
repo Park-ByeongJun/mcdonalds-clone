@@ -35,12 +35,33 @@
       "email": "test1@naver.com",
       "content": "teste1\n1is test",
       "id": "cK8PbNbwQOI"
+    }
+  ],
+  "qna": [
+    {
+      "title": "ㅅㄷㄴㅅ",
+      "email": "ㅅㄷㄴㅅ@naver.com",
+      "content": "ㅅㄷㄴㅅ1",
+      "answer": "",
+      "date": "2026-06-09",
+      "id": "9-7kmDKXRGg"
     },
     {
-      "title": "123",
-      "email": "123@naver.com",
-      "content": "123",
-      "id": "tV29jcagG6A"
+      "title": "ㅂㅈㄷ",
+      "email": "ㅂㅈㄷ@naver.com",
+      "content": "ㅂㅈㄷ",
+      "answer": "",
+      "date": "2026-06-09",
+      "id": "fkPUbzBEeJs"
+    },
+    {
+      "title": "test12",
+      "email": "test12@naver.com",
+      "content": "test12",
+      "answer": "",
+      "date": "2026-06-09",
+      "id": "upJB6V3PHr4"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
